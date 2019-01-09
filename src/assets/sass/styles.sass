@@ -1,0 +1,57 @@
+// Estilos generales
+@font-face
+  font-family: recharge
+  src: url('../fonts/recharge_bd.ttf')
+
+html
+   overflow-x: hidden   
+body
+   margin: 0 
+   padding: 0
+   background-image: url('../img/fondo.jpg')
+   background-attachment: fixed
+   background-size: cover
+   height: 100vh
+   @media (max-width: 767px)
+      font-size: 0.9rem
+      h4
+         font-size: 1.5rem
+      h2
+         font-size: 1.7rem
+   @media (max-width: 499px)
+      font-size: 0.8rem
+      h4
+         font-size: 1.3rem
+      h2
+         font-size: 1.4rem
+
+h2, h3, h4, h5, h6
+   color: #ff9900
+
+h1
+   font-family: 'recharge', 'Charm'
+   font-size: 1.75rem
+   color: #cccccc
+   text-shadow: 0 0 8px #aa0000
+   @media (max-width: 991px)
+      font-size: 1.5rem
+   @media (max-width: 767px)
+      font-size: 1rem
+   // media (max-width: 499px)
+   //   font-size: 0.7rem
+
+.jumbotron, .card
+   background-color: transparent
+   border: 1px solid #707070
+   border-radius: 8px
+   h2
+      border-bottom: 1px solid #707070
+      border-color: #707070
+
+.card img.card-img-top
+   border-radius: 8px 8px 0 0
+
+.anim.left, .anim-right, .anim-up, .anim-down
+   animation-duration: 2.5s
+
+

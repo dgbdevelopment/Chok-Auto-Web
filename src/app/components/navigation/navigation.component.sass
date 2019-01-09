@@ -1,0 +1,31 @@
+// Variables
+$color-font-menu: #ff9900
+
+// Estilos
+nav.navbar
+   font-family: Charm   
+   .navbar-brand img
+      transition: all ease 500ms
+      &:hover
+         transform: rotate(360deg)
+   a.nav-link
+      color: $color-font-menu
+   a.nav-link
+      font-size: 1.2rem
+      transition: all linear 120ms
+      &.active, &:hover
+         color: #ffcc00
+      &:hover
+         transform: scale(1.05)
+
+   .navbar-toggler
+      border-color: rgba(255,153,0,0.15)
+      .navbar-toggler-icon
+         background-color: transparent
+         background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='#ff9900' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>")
+
+@media (max-width: 991px)
+   ul li.nav-item
+      margin-left: 0px !important
+   a.nav-link
+      border-bottom: 1px solid rgba(255,153,0,0.25)
