@@ -1,7 +1,7 @@
 <h1 class="text-center mt-4 mb-5 anim-left animated " id="titulo">
    Tu Taller de Chapa y Pintura en Montequinto
 </h1>
-<div class="anim-right animated " id="div1">
+<div class="anim-right animated">
    <app-slider></app-slider>
 </div>
 <!-- <div class="anim-up animated " id="div1">
@@ -14,18 +14,18 @@
       <app-slider></app-slider>
 </div> -->
 <div class="row mx-1 justify-content-between">
-   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-10 offset-1 anim-right animated mb-5 pt-2">
+   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1 anim-right animated mb-5 pt-2">
       <img src="../../../assets/img/home/chapaypintura.jpg" class="card-img-top" alt="...">
       <div class="card-body d-flex flex-column justify-content-between">
          <div>
             <h4 class="card-title"><i class="fas fa-hammer"></i> Chapa y pintura</h4>         
             <p class="card-text pb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore laboriosam maiores vitae incidunt. Dolore impedit, perferendis sit expedita explicabo voluptate dolorem quae in pariatur laboriosam? Quidem earum accusamus animi laudantium?</p>
          </div>
-         <a href="#" class="btn btn-danger btn-block">Ver más</a>
+         <a href="#" class="btn btn-danger btn-block">Más información</a>
          
       </div>
    </div>
-   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-10 offset-1 anim-up animated mb-5 pt-2">
+   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1 anim-up animated mb-5 pt-2">
       <img src="../../../assets/img/home/mecanica.jpg" class="card-img-top" alt="...">
       <div class="card-body d-flex flex-column justify-content-between">
          <div>
@@ -33,43 +33,62 @@
             <p class="card-text pb-3">Some quick example text to build on the card title and make up the bulk of the
             card's content.</p>
          </div>
-         <a href="#" class="btn btn-danger btn-block">Ver más</a>
+         <a href="#" class="btn btn-danger btn-block">Más información</a>
       </div>
    </div>
-   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-10 offset-1 anim-left animated mb-5 pt-2">
+   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1 anim-left animated mb-5 pt-2">
       <img src="../../../assets/img/home/diagnosis.jpg" class="card-img-top" alt="...">
       <div class="card-body d-flex flex-column justify-content-between">
          <div>
             <h4 class="card-title"><i class="fas fa-laptop"></i> Diagnosis asistida</h4>
-            <p class="card-text pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus ea cupiditate odit animi aliquid neque suscipit nihil dicta alias.</p>
+            <p class="card-text pb-3">¿Algún testigo encendido en su cuadro? Podemos indicarle la causa rápidamente con una diagnosis por ordenador. Rápido, eficaz y seguro.</p>
          </div>
-         <a href="#" class="btn btn-danger btn-block">Ver más</a>
+         <a [routerLink]="['/servicios/diagnosis']" class="btn btn-danger btn-block">Más información</a>
       </div>
    </div>   
-</div>
-<div class="row mx-1 justify-content-between">
-   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-10 offset-1 anim-right animated mb-5 pt-2">
+
+   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1 anim-right animated mb-5 pt-2">
       <img src="../../../assets/img/home/sustitucion.jpg" class="card-img-top" alt="...">
       <div class="card-body d-flex flex-column justify-content-between">
          <div>
             <h4 class="card-title"><i class="fas fa-car"></i> Vehículo de cortesía</h4>
             <p class="card-text pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut officia neque et enim autem sunt sint voluptas distinctio consequatur! Labore eaque aliquid voluptatum recusandae, doloremque corporis odit consequuntur eveniet eos!</p>
          </div>
-         <a href="#" class="btn btn-danger btn-block">Ver más</a>
+         <a href="#" class="btn btn-danger btn-block">Más información</a>
       </div>
    </div>
-   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-10 offset-1 anim-left animated mb-5 pt-2">
+   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1 anim-down animated mb-5 pt-2">
       <img src="../../../assets/img/home/personalizaciones.jpeg" class="card-img-top" alt="...">
       <div class="card-body d-flex flex-column justify-content-between">
          <div>
             <h4 class="card-title"><i class="fas fa-sliders-h"></i> Personalización</h4>
             <p class="card-text pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam ratione dolore in! Aliquam fuga consequatur incidunt odio earum exercitationem rem ea asperiores, facilis perspiciatis!</p>
          </div>
-         <a href="#" class="btn btn-danger btn-block">Ver más</a>
+         <a href="#" class="btn btn-danger btn-block">Más información</a>
       </div>
    </div>
+   <div class="card col-lg-4 offset-lg-0 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-10 offset-1 anim-left animated mb-5 pt-2">
+         <img src="../../../assets/img/home/ocasion.jpg" class="card-img-top" alt="...">
+         <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+               <h4 class="card-title"><i class="fas fa-taxi"></i> Vehículos de ocasión</h4>
+               <p class="card-text pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aperiam ratione dolore in! Aliquam fuga consequatur incidunt odio earum exercitationem rem ea asperiores, facilis perspiciatis!</p>
+            </div>
+            <a href="#" class="btn btn-danger btn-block">Más información</a>
+         </div>
+      </div>
 </div>
-<div class="jumbotron">
+<div class="jumbotron pb-1 anim-left animated">
    <h2 class="text-center pt-0 pb-4">Sobre nosotros</h2>
-   
+   <p class="pt-4">
+      Chok-Auto es un taller multimarca referente en el sector de la chapa y pintura del automóvil en Montequinto. Nuestro taller es reconocido positivamente desde que abrimos nuestras puertas al público en el año 2006. Nos hemos consolidado durante años en nuestra seriedad y en la alta preparación y cualificación de nuestro equipo de profesionales.<br><br>
+
+      Ofrecemos a nuestros clientes garantía de la mejor calidad y un excelente servicio en nuestras reparaciones. Nuestro objetivo es ser su taller de confianza. Reparamos todas las marcas de coches y trabajamos para todas la compañías de seguros.<br><br>
+      
+      Disponemos en nuestras instalaciones de la más innovadora tecnología y solamente se utilizan productos de primeras marcas tanto en pintura como en recambios, lo que nos permite ofrecer a nuestros clientes resultados del más alto nivel.<br><br>
+      
+      Nuestras instalaciones disponen de un amplio espacio de taller con todo tipo de maquinaria indispensable para lograr un acabado profesional sin renunciar a la rapidez y eficacia en su reparación.<br><br>
+      
+      Presupuestos sin compromiso. Para cualquier consulta pueden llamarnos o rellenar el formulario en la página de <a href="#">contacto</a>.
+   </p>
 </div>

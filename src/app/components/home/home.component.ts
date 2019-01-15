@@ -16,34 +16,36 @@ export class HomeComponent implements OnInit, AfterViewInit {
    }
 
    ngOnInit() {
-
    }
 
    ngAfterViewInit() {
-      $('.anim-left, .anim-right, .anim-up, .anim-down').css('opacity', '0');
+
+      $('.anim-in').each(function() {
+         animar($(this), 'fadeIn', '80%');
+      });
       $('.anim-right').each(function() {
-         animar($(this), 'fadeInRight');
+         animar($(this), 'fadeInRight', '80%');
       });
       $('.anim-left').each(function() {
-         animar($(this), 'fadeInLeft');
+         animar($(this), 'fadeInLeft', '80%');
       });
       $('.anim-up').each(function() {
-         animar($(this), 'fadeInUp');
+         animar($(this), 'fadeInUp', '80%');
       });
       $('.anim-down').each(function() {
-         animar($(this), 'fadeInDown');
+         animar($(this), 'fadeInDown', '80%');
       });
    }
 }
 
-function animar(element, animation) {
+function animar(element: $, animation: string, off: string) {
    const repetir = setInterval(function() {
       if (element.height() >= 10) {
          element.waypoint({
             handler: function () {
                element.addClass(animation);
             },
-            offset: '80%' /*'bottom-in-view'*/
+            offset: off /*'bottom-in-view'*/
          });
          clearInterval(repetir);
       }

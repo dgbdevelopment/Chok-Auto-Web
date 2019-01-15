@@ -12,21 +12,26 @@ body
    background-attachment: fixed
    background-size: cover
    height: 100vh
-   @media (max-width: 767px)
+   @media (max-width: 991px)
       font-size: 0.9rem
       h4
          font-size: 1.5rem
       h2
          font-size: 1.7rem
-   @media (max-width: 499px)
+   @media (max-width: 575px)
       font-size: 0.8rem
       h4
          font-size: 1.3rem
       h2
          font-size: 1.4rem
 
+.main-container
+   width: 100%
+
 h2, h3, h4, h5, h6
    color: #ff9900
+   &.border-bottom
+      border-bottom: 1px solid #ff9900 !important
 
 h1
    font-family: 'recharge', 'Charm'
@@ -39,6 +44,13 @@ h1
       font-size: 1rem
    // media (max-width: 499px)
    //   font-size: 0.7rem
+@media (min-width: 768px)
+   .col-md-6
+      max-width: 48.5%
+
+@media (min-width: 992px)
+   .col-lg-4    
+      max-width: 32%
 
 .jumbotron, .card
    background-color: transparent
@@ -51,7 +63,6 @@ h1
 .card img.card-img-top
    border-radius: 8px 8px 0 0
 
-.anim.left, .anim-right, .anim-up, .anim-down
+.anim-12, .anim-10, .anim-4, .anim-left, .anim-right, .anim-up, .anim-down, .anim-in
+   opacity: 0
    animation-duration: 2.5s
-
-

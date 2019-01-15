@@ -30,15 +30,15 @@ export class SliderComponent implements OnInit, AfterViewInit {
          auto: true,
          mode: 'fade',
          speed: 1000,
-         easing: 'ease-in-out',
+         easing: 'ease',
          pager: false,
-         pause: 6000,
+         pause: 5000,
          autoHover: true,
          startSlide: 4
       });
       // Estilos CSS
       $('.bx-wrapper, .bx-viewport').css({ 'border-radius': '5px' });
-      $('.bx-wrapper').css({ 'opacity': '.9', 'border': '1px solid #ccc'/*, 'box-shadow': '0 0 5px 2px #ccc'*/ });
+      $('.bx-wrapper').css({'background': 'transparent', 'border': '5px solid transparent'});
       $('.bx-wrapper .bx-next').css({ 'background': 'transparent' })
          .html('<i class="fas fa-angle-right"></i>');
       $('.bx-wrapper .bx-prev').css({ 'background': 'transparent' })

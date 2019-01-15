@@ -1,0 +1,48 @@
+<div id="diagnosis">
+   <h2 class="anim-in animated text-center border-bottom py-4 mb-4"><i class="fas fa-laptop"></i> Diagnosis asistida por odenador</h2>
+   <p class="anim-in animated text-justify">
+      Hoy en día es indispensable disponer de una máquina de diagnosis en el taller. La complejidad de los sistemas
+      electrónicos en los vehículos actuales hace que se multipliquen los elementos que pueden activar el indicador de
+      avería. Si a eso añadimos las diferencias en el diagnóstico de cada fabricante, nos damos cuenta de que disponer
+      de un sistema de diagnóstico de vehículos es un elemento de gran impacto en la rentabilidad de su reparación.
+   </p>
+   <div class="imagen-100 anim-in animated col-md-8 offset-md-2 mt-5">
+      <img src="../../../assets/img/averia.png" alt="Indicador de avería" width="100%">
+   </div>
+   <h4 class="anim-left animated text-center my-5">Ventajas de la autodiagnosis</h4>
+   <div class="row text-center mb-3">
+      <div class="anim-right animated col-4 mb-2"><i class="fa fa-wrench"></i>
+         <p class="mt-3">Reparaciones más rápidas y seguras.</p>
+      </div>
+      <div class="anim-up animated col-4 mb-2"><i class="fa fa-user"></i>
+         <p class="mt-3">Mejor servicio a nuestros clientes.</p>
+      </div>
+      <div class="anim-left animated col-4 mb-2"> <i class="fas fa-euro-sign"></i>
+         <p class="mt-3">Mayor rentabilidad.</p>
+      </div>
+   </div>
+   <h4 class="anim-right animated text-center my-5">Funcionalidades</h4>
+   <p class="anim-in animated text-justify">
+      Gracias a nuestro equipo podemos diagnosticar rápidamente y con muy poco margen de error todos los componentes de su vehículo, facilitando así el acceso al fallo en cuestión de una manera más eficaz y concisa. Entre otros, podemos verificar los siguientes componentes.
+   </p>
+   <div class="row d-flex flex-wrap mt-4 justify-content-around">
+      <div class="anim-10 animated text-center col-4 col-sm-3 col-md-2 p-2 mx-3" *ngFor="let diag of diagnosis">
+         <div class="diag p-1 m-auto">
+            <img class="" src="../../../assets/img/mecanica/{{diag.url}}" alt="{{diag.description}}">
+         </div>
+         <p class="mt-1">{{diag.description}}</p>
+      </div>
+   </div>
+   <h4 class="anim-right animated text-center my-5">Vehículos</h4>
+   <p class="short-p anim-in animated">
+      Nuestro equipo de diagnosis trabaja con las principales marcas de coches del mercado entre las que cabe destacar las siguientes.
+   </p>
+   <div class="row d-flex mt-4 align-content-between">
+      <div class="anim-12 animated text-center col-4 col-sm-3 col-md-2 p-2" *ngFor="let marca of marcas">
+         <div class="marca p-1 w-75 m-auto">
+            <img class="" src="../../../assets/img/marcas/{{marca.url}}" alt="{{marca.nombre}}">
+         </div>
+         <p class="mt-1">{{marca.nombre}}</p>
+      </div>
+   </div>
+</div>
