@@ -1,12 +1,15 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AnimationService } from '../../services/animation.service';
+
 import $ from 'jquery';
 declare const $: $;
 
 @Component({
    selector: 'app-diagnosis',
    templateUrl: './diagnosis.component.html',
-   styleUrls: ['./diagnosis.component.sass']
+   styleUrls: ['./diagnosis.component.sass'],
+   providers: [AnimationService]
 })
 export class DiagnosisComponent implements OnInit, AfterViewInit {
 
@@ -14,7 +17,10 @@ export class DiagnosisComponent implements OnInit, AfterViewInit {
    public diagnosis: Array<any>;
    // private fragment: string;
 
-   constructor(/*private route: ActivatedRoute*/) { }
+   constructor(
+      /*private route: ActivatedRoute*/
+      private animator: AnimationService
+   ) { }
 
    ngOnInit() {
       window.scrollTo({top: 0});
@@ -48,52 +54,12 @@ export class DiagnosisComponent implements OnInit, AfterViewInit {
       // try {
       //    document.querySelector('#' + this.fragment).scrollIntoView();
       // } catch (e) { console.log(e); }
-
-      $('.anim-12').each(function (index) {
-         const animation = getAnimation(index, 3);
-         animar($(this), animation, 'bottom-in-view');
-      });
-      $('.anim-10').each(function (index) {
-         const animation = getAnimation(index, 5, 'Big');
-         animar($(this), animation, 'bottom-in-view');
-      });
-
-      $('.anim-in').each(function () {
-         animar($(this), 'fadeIn', 'bottom-in-view');
-      });
-      $('.anim-right').each(function () {
-         animar($(this), 'fadeInRight', '80%');
-      });
-      $('.anim-left').each(function () {
-         animar($(this), 'fadeInLeft', '80%');
-      });
-      $('.anim-up').each(function () {
-         animar($(this), 'fadeInUp', '80%');
-      });
-      $('.anim-down').each(function () {
-         animar($(this), 'fadeInDown', '80%');
-      });
-   }
-}
-
-function animar(element: $, animation: string, off: string) {
-   const repetir = setInterval(function () {
-      if (element.height() >= 10) {
-         element.waypoint({
-            handler: function () {
-               element.addClass(animation);
-            },
-            offset: off /*'bottom-in-view'*/
-         });
-         clearInterval(repetir);
-      }
-   }, 200);
-}
-
-function getAnimation(index: number, elements: number, big: string = '') {
-   if (Math.floor(index / elements) % 2 === 0) {
-      return 'fadeInRight' + big;
-   } else {
-      return 'fadeInLeft' + big;
+      this.animator.ani($('.anim-12'), '', 'bottom-in-view', 3);
+      this.animator.ani($('.anim-10'), '', 'bottom-in-view', 5, 'Big');
+      this.animator.ani($('.anim-in'), 'fadeIn', 'bottom-in-view');
+      this.animator.ani($('.anim-right'), 'fadeInRight', '80%');
+      this.animator.ani($('.anim-left'), 'fadeInLeft', '80%');
+      this.animator.ani($('.anim-up'), 'fadeInUp', '80%');
+      this.animator.ani($('.anim-down'), 'fadeInDown', '80%');
    }
 }

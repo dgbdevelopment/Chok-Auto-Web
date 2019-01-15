@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { AnimationService } from '../../services/animation.service';
 import $ from 'jquery';
 declare const $: $;
 
@@ -7,11 +8,14 @@ declare const $: $;
 @Component({
    selector: 'app-home',
    templateUrl: './home.component.html',
-   styleUrls: ['./home.component.sass']
+   styleUrls: ['./home.component.sass'],
+   providers: [AnimationService]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-   constructor() {
+   constructor(
+      private animator: AnimationService
+   ) {
 
    }
 
@@ -20,34 +24,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
    ngAfterViewInit() {
 
-      $('.anim-in').each(function() {
-         animar($(this), 'fadeIn', '80%');
-      });
-      $('.anim-right').each(function() {
-         animar($(this), 'fadeInRight', '80%');
-      });
-      $('.anim-left').each(function() {
-         animar($(this), 'fadeInLeft', '80%');
-      });
-      $('.anim-up').each(function() {
-         animar($(this), 'fadeInUp', '80%');
-      });
-      $('.anim-down').each(function() {
-         animar($(this), 'fadeInDown', '80%');
-      });
+      this.animator.ani($('.anim-in'), 'fadeIn', 'bottom-in-view');
+      this.animator.ani($('.anim-right'), 'fadeInRight', '80%');
+      this.animator.ani($('.anim-left'), 'fadeInLeft', '80%');
+      this.animator.ani($('.anim-up'), 'fadeInUp', '80%');
+      this.animator.ani($('.anim-down'), 'fadeInDown', '80%');
    }
-}
-
-function animar(element: $, animation: string, off: string) {
-   const repetir = setInterval(function() {
-      if (element.height() >= 10) {
-         element.waypoint({
-            handler: function () {
-               element.addClass(animation);
-            },
-            offset: off /*'bottom-in-view'*/
-         });
-         clearInterval(repetir);
-      }
-   }, 200);
 }
