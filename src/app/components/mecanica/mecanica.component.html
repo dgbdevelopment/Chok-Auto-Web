@@ -1,9 +1,21 @@
-<div id="diagnosis">
-   <h2 class="anim-in animated text-center border-bottom py-4 mb-4"><i class="fas fa-laptop"></i> Diagnosis asistida por odenador</h2>
+<div id="mecanica">
+   <h2 class="anim-in animated text-center border-bottom py-4 mb-4"><i class="fas fa-tools"></i> Mecánica en general</h2>
    <p class="anim-in animated text-justify">
-      Hoy en día es indispensable disponer de una máquina de diagnosis en el taller. La complejidad de los sistemas
-      electrónicos en los vehículos actuales hace que se multipliquen los elementos que pueden activar el indicador de
-      avería. Si a eso añadimos las diferencias en el diagnóstico de cada fabricante, nos damos cuenta de que disponer
-      de un sistema de diagnóstico de vehículos es un elemento de gran impacto en la rentabilidad de su reparación.
+      En Chok-Auto ponemos toda nuestra profesionalidad y experiencia para solucionar cualquier problema en su vehículo.<br><br>
+      Disponemos de los últimos equipos de análisis y recambios auténticos acordes a la normativa vigente de los fabricantes.<br><br>
+      Nuestro personal se encuentra altamente cualificado y preparado para que en caso de avería todo vuelva a funcionar. Gracias a los numerosos años de experiencia, nuestros especialistas realizarán de manera rápida y profesional cualquier trabajo mecánico que precise su vehículo.<br><br>
+      Si necesita un mantenimiento, revisión y/o una reparación no dude en visitarnos. Somos taller experto en todas las marcas de coches, estamos a la vanguardia de la tecnología y podemos garantizar un mantenimiento óptimo de su coche cuando lo necesite.
    </p>
+   <div class="imagen-100 anim-down animated col-md-8 offset-md-2 mt-5">
+      <img src="../../../assets/img/mecanica.jpg" alt="Mecánica en general" width="100%">
+   </div>
+   <h4 class="anim-left animated text-center my-5">Servicios de mecánica</h4>
+   <div class="row d-flex flex-wrap mt-4 justify-content-around">
+      <div class="anim-12 animated text-center col-4 col-sm-3 col-md-2 p-2" *ngFor="let servicio of servicios">
+         <div class="mecanica p-1 m-auto">
+            <img class="" src="../../../assets/img/mecanica/{{servicio.img}}" alt="{{servicio.nombre}}">
+         </div>
+         <p class="mt-1">{{servicio.nombre}}</p>
+      </div>
+   </div>
 </div>

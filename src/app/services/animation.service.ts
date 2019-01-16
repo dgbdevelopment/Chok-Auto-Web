@@ -9,22 +9,22 @@ export class AnimationService {
 
    constructor() { }
 
-   ani(objs: any, animation: string, offset: string, elements: number = null, big: string = '') {
+   animar(objs: any, animation: string, offset: string, elements: number = null, big: string = '') {
       if (elements !== null && elements !== undefined) {
          objs.each(function (index) {
             animation = getAnimation(index, elements, big);
-            animar($(this), animation, 'bottom-in-view');
+            animate($(this), animation, offset);
          });
       } else {
          objs.each(function () {
-            animar($(this), animation, 'bottom-in-view');
+            animate($(this), animation, offset);
          });
 
       }
    }
 }
 
-function animar(element: $, animation: string, off: string) {
+function animate(element: $, animation: string, off: string) {
    const repetir = setInterval(function () {
       if (element.height() >= 10) {
          element.waypoint({

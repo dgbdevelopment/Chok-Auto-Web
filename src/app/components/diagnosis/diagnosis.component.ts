@@ -41,8 +41,7 @@ export class DiagnosisComponent implements OnInit, AfterViewInit {
       });
 
       const description = ['Localización de averías', 'Apagado de inspecciones', 'Frenos', 'Dirección', 'Suspensión',
-      'Transmisión', 'Airbag', 'Climatizador',
-      'Cuadro de mandos', 'Aparcamiento asistido'];
+      'Transmisión', 'Airbag', 'Climatizador', 'Cuadro de mandos', 'Aparcamiento asistido'];
       this.diagnosis = [];
       description.map((desc, index) => {
          const diag = { description: desc, url: desc.replace(' ', '-').replace(' ', '-').replace('ó', 'o').replace('í', 'i') + '.png' };
@@ -54,12 +53,12 @@ export class DiagnosisComponent implements OnInit, AfterViewInit {
       // try {
       //    document.querySelector('#' + this.fragment).scrollIntoView();
       // } catch (e) { console.log(e); }
-      this.animator.ani($('.anim-12'), '', 'bottom-in-view', 3);
-      this.animator.ani($('.anim-10'), '', 'bottom-in-view', 5, 'Big');
-      this.animator.ani($('.anim-in'), 'fadeIn', 'bottom-in-view');
-      this.animator.ani($('.anim-right'), 'fadeInRight', '80%');
-      this.animator.ani($('.anim-left'), 'fadeInLeft', '80%');
-      this.animator.ani($('.anim-up'), 'fadeInUp', '80%');
-      this.animator.ani($('.anim-down'), 'fadeInDown', '80%');
+      this.animator.animar($('.anim-12'), '', '90%', 3);
+      this.animator.animar($('.anim-10'), '', '90%', 5, 'Big');
+      this.animator.animar($('.anim-in'), 'fadeIn', 'bottom-in-view');
+      this.animator.animar($('.anim-right'), 'fadeInRight', '80%');
+      this.animator.animar($('.anim-left'), 'fadeInLeft', '80%');
+      this.animator.animar($('.anim-up'), 'fadeInUp', '80%');
+      this.animator.animar($('.anim-down'), 'fadeInDown', '80%');
    }
 }

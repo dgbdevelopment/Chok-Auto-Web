@@ -24,10 +24,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
    ngAfterViewInit() {
 
-      this.animator.ani($('.anim-in'), 'fadeIn', 'bottom-in-view');
-      this.animator.ani($('.anim-right'), 'fadeInRight', '80%');
-      this.animator.ani($('.anim-left'), 'fadeInLeft', '80%');
-      this.animator.ani($('.anim-up'), 'fadeInUp', '80%');
-      this.animator.ani($('.anim-down'), 'fadeInDown', '80%');
+      this.animator.animar($('.anim-in'), 'fadeIn', 'bottom-in-view');
+      this.animator.animar($('.anim-right'), 'fadeInRight', '80%');
+      this.animator.animar($('.anim-left'), 'fadeInLeft', '80%');
+      this.animator.animar($('.anim-up'), 'fadeInUp', '80%');
+      this.animator.animar($('.anim-down'), 'fadeInDown', '80%');
    }
 }
