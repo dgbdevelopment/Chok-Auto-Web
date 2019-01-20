@@ -13,6 +13,8 @@ declare const $: $;
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
+   public urls: Array<string>;
+
    constructor(
       private animator: AnimationService
    ) {
@@ -20,6 +22,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
    }
 
    ngOnInit() {
+
+      this.urls = [
+         '../../../assets/img/slider/slider1.jpg',
+         '../../../assets/img/slider/slider2.jpg',
+         '../../../assets/img/slider/slider3.jpg',
+         '../../../assets/img/slider/slider4.jpg',
+         '../../../assets/img/slider/slider5.jpg'
+      ];
    }
 
    ngAfterViewInit() {

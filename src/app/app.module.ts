@@ -10,6 +10,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { DiagnosisComponent } from './components/diagnosis/diagnosis.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MecanicaComponent } from './components/mecanica/mecanica.component';
+import { AseguradorasComponent } from './components/aseguradoras/aseguradoras.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MecanicaComponent } from './components/mecanica/mecanica.component';
     SliderComponent,
     DiagnosisComponent,
     FooterComponent,
-    MecanicaComponent
+    MecanicaComponent,
+    AseguradorasComponent
   ],
   imports: [
     BrowserModule,

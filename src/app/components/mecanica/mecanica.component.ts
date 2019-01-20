@@ -41,6 +41,10 @@ export class MecanicaComponent implements OnInit, AfterViewInit {
             img: 'Frenos.png'
          },
          {
+            nombre: 'Carga y arranque',
+            img: 'Carga-y-arranque.png'
+         },
+         {
             nombre: 'Distribución',
             img: 'Distribucion.png'
          },
@@ -59,10 +63,6 @@ export class MecanicaComponent implements OnInit, AfterViewInit {
          {
             nombre: 'Turbo',
             img: 'Turbo.png'
-         },
-         {
-            nombre: 'Motor',
-            img: 'Motor.png'
          },
          {
             nombre: 'Aire Acondicionado',

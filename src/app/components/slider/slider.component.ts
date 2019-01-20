@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 import $ from 'jquery';
 declare const $: $;
 
@@ -11,18 +11,11 @@ export class SliderComponent implements OnInit, AfterViewInit {
 
    // We need to install bxslider: npm i -S bxslider
 
-   public images_url: Array<string>;
+   @Input() images: Array<string>;
 
    constructor() { }
 
    ngOnInit() {
-      this.images_url = [
-         '../../../assets/img/slider/slider1.jpg',
-         '../../../assets/img/slider/slider2.jpg',
-         '../../../assets/img/slider/slider3.jpg',
-         '../../../assets/img/slider/slider4.jpg',
-         '../../../assets/img/slider/slider5.jpg'
-      ];
    }
 
    async ngAfterViewInit() {
