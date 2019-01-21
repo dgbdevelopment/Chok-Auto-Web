@@ -14,12 +14,16 @@ body
    height: 100vh
    @media (max-width: 991px)
       font-size: 0.9rem
+      h5
+         font-size: 1.3rem
       h4
          font-size: 1.5rem
       h2
          font-size: 1.7rem
    @media (max-width: 575px)
       font-size: 0.8rem
+      h5
+         font-size: 1.1rem
       h4
          font-size: 1.3rem
       h2
@@ -71,11 +75,17 @@ h1
    opacity: 0
    animation-duration: 2.5s
 
-a
+a, .link
    color: #ff9900
+   background: transparent
+   border: none
+   cursor: pointer
+   padding: 0
    &:hover
       color:#ffcc00
       text-decoration: none
+   &:focus
+      outline: none
 
 #diagnosis .diag, #mecanica .mecanica
    border: 5px solid #707070

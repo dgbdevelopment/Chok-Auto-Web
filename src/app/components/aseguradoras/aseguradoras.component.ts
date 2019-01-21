@@ -55,4 +55,10 @@ export class AseguradorasComponent implements OnInit, AfterViewInit {
       this.animator.animar($('.anim-left'), 'fadeInLeft', '80%');
    }
 
+   goDatos() {
+      $('html, body').animate({ scrollTop: $('#datos-taller').offset().top }, 1500);
+   }
+
 }
+
+
