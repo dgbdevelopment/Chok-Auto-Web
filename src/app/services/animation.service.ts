@@ -26,7 +26,7 @@ export class AnimationService {
 
 function animate(element: $, animation: string, off: string) {
    const repetir = setInterval(function () {
-      if (element.height() >= 10) {
+      if (element.height() > 0) {
          element.waypoint({
             handler: function () {
                element.addClass(animation);

@@ -23,6 +23,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
    ngOnInit() {
 
+      window.scrollTo({top: 0});
+
       this.urls = [
          '../../../assets/img/slider/slider1.jpg',
          '../../../assets/img/slider/slider2.jpg',

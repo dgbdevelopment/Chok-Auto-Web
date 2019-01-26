@@ -1,0 +1,53 @@
+<div id="contacto">
+   <h2 class="anim-in animated text-center border-bottom py-4 mb-4"><i class="fab fa-wpforms"></i> Contacto</h2>
+   <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)"class="anim-in animated col-lg-6 col-md-8 col-sm-10 mx-auto mt-5 p-3">
+      <div id="form-container">
+         <h5 class="pt-3 text-center">Formulario de contacto</h5>
+         <div class="form-group">
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="fields.name" class="form-control mt-4" placeholder="Nombre" required>
+            <small *ngIf="!name.valid && name.touched" class="form-text text-danger">El nombre es obligatorio</small>
+            <input type="email" name="email" #email="ngModel" [(ngModel)]="fields.email" class="form-control text-lowercase mt-4" placeholder="E-mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            <small *ngIf="!email.valid && email.touched" class="form-text text-danger">El e-mail no es correcto</small>
+            <textarea class="form-control mt-4" name="text" #text="ngModel" [(ngModel)]="fields.text" placeholder="Mensaje" required>{{fields.text}}</textarea>
+            <small *ngIf="!text.valid && text.touched" class="form-text text-danger">El mensaje no puede estar vacío</small>
+            <button type="submit" class="btn btn-danger btn-block mt-4" [disabled]="!contactForm.form.valid">Enviar</button>
+         </div>         
+      </div>
+      <div id="result">
+         <h5 class="text-center pt-3">Formulario enviado correctamente</h5>
+         <p class="pt-2"><span>Nombre:</span> &nbsp;{{fields.name}}</p>
+         <p class="pt-2"><span>E-mail:</span> &nbsp;{{fields.email}}</p>
+         <p class="pt-2"><span>Mensaje:</span></p>
+         <p>{{fields.text}}</p>
+         <h5 class="text-center pt-3">Nos pondremos en contacto con usted lo antes posible. Gracias por su confianza.</h5>
+      </div>
+   </form>
+   <h4 class="anim-up animated text-center my-5"><i class="horario far fa-clock"></i> &nbsp; Horario de apertura</h4>
+   <div class="anim-down animated col-12 col-lg-6 col-md-8 col-sm-10 d-flex justify-content-center align-items-center mx-auto">
+      <div class="col-4 text-right">
+         <i class="horario far fa-clock"></i>
+      </div>
+      <div class="col-8 ml-4">
+         <p><span>De Lunes a Jueves:</span><br>
+            De 8:00 a 14:00 y de 16:00 a 19:00
+         </p>
+         <p><span>Viernes:</span><br>
+            De 7:00 a 15:00
+         </p>
+      </div>
+   </div>
+   <h4 class="anim-left animated text-center my-5"><i class="fas fa-map-marker-alt"></i> &nbsp; Dónde estamos</h4>
+   <div class="map anim-left animated col-lg-10 mx-auto d-flex flex-wrap justify-content-between align-items-center my-5">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.840786553008!2d-5.941196484684085!3d37.34627784446908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126fb4ea92ee35%3A0xffd563ff75281594!2sCalle+V%C3%ADa+Apia%2C+35%2C+41089+Dos+Hermanas%2C+Sevilla!5e0!3m2!1ses-419!2ses!4v1548267583898" width="100%" height="300" frameborder="0" style="border:0; border-radius: 30px;" allowfullscreen class="col-sm-6"></iframe>
+      <div class="col-sm-6 mt-4 mt-sm-2 pl-4">
+         <h5>Chok-Auto</h5>
+         <p>Reparaciones de Vehículos a Motor Paintcar S.L.</p>
+         <p>C/ Vía Apia, 35</p>
+         <p>41089 Montequinto - Dos Hermanas</p>
+         <p>Sevilla</p>
+         <p><i class="tlf fas fa-phone"></i> &nbsp;954 12 21 70</p>
+         <p><i class="what fab fa-whatsapp-square"></i> &nbsp;655 05 27 44</p>
+         <p><i class="mail far fa-envelope"></i> &nbsp;chok-auto@hotmail.com</p>
+      </div>
+   </div>
+</div>
