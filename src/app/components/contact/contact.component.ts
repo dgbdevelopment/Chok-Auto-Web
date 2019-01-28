@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AnimationService } from '../../services/animation.service';
+import { MailerService } from '../../services/mailer.service';
 
 import $ from 'jquery';
 declare const $: $;
@@ -9,14 +10,15 @@ declare const $: $;
    selector: 'app-contact',
    templateUrl: './contact.component.html',
    styleUrls: ['./contact.component.sass'],
-   providers: [AnimationService]
+   providers: [AnimationService, MailerService]
 })
 export class ContactComponent implements OnInit, AfterViewInit {
 
    public fields: any;
 
    constructor(
-      private animator: AnimationService
+      private animator: AnimationService,
+      private mailer: MailerService
    ) { }
 
    ngOnInit() {
@@ -40,11 +42,12 @@ export class ContactComponent implements OnInit, AfterViewInit {
    }
 
    onSubmit(form) {
-      console.log(this.fields);
-      $('#form-container').animate({'opacity': '0'}, 750, function() {
-         // $(this).parent().css('min-height', $(this).parent().height());
-         $(this).hide();
-         $('#result').show().animate({'opacity': '1'}, 750);
+      this.mailer.sendMail(this.fields).subscribe( res => {
+         $('#form-container').animate({'opacity': '0'}, 750, function() {
+            // $(this).parent().css('min-height', $(this).parent().height());
+            $(this).hide();
+            $('#result').show().animate({'opacity': '1'}, 750);
+         });
       });
    }
 

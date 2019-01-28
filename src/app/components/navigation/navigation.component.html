@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
-   <a class="navbar-brand" [routerLink]="['/home']"><img src="../../../assets/img/logo.png" width="120" alt="Logo Chok-Auto"></a>
+   <a class="navbar-brand" [routerLink]="['/home']"><img src="../../../assets/img/logo.png" width="200" alt="Logo Chok-Auto"></a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
      <span class="navbar-toggler-icon"></span>
    </button>
@@ -11,7 +11,7 @@
        <li class="nav-item dropdown ml-4" [routerLinkActive]="['active']">
          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" ><i class="fas fa-cogs"></i> Servicios</a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="['/']">Chapa y Pintura</a>
+            <a class="dropdown-item" [routerLink]="['/servicios/chapa-y-pintura']" [routerLinkActive]="['active']">Chapa y Pintura</a>
             <a class="dropdown-item" [routerLink]="['/servicios/mecanica']" [routerLinkActive]="['active']">Mecánica en general</a>
             <a class="dropdown-item" [routerLink]="['/servicios/diagnosis']" [routerLinkActive]="['active']">Autodiagnosis</a>
             <a class="dropdown-item" [routerLink]="['/']">Vehículos de cortesía</a>

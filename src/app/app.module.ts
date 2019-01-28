@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MecanicaComponent } from './components/mecanica/mecanica.component';
 import { AseguradorasComponent } from './components/aseguradoras/aseguradoras.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ChapaComponent } from './components/chapa/chapa.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +28,13 @@ import { ContactComponent } from './components/contact/contact.component';
     FooterComponent,
     MecanicaComponent,
     AseguradorasComponent,
-    ContactComponent
+    ContactComponent,
+    ChapaComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
