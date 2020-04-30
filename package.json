@@ -24,7 +24,7 @@
     "bootstrap": "^4.2.1",
     "bxslider": "^4.2.14",
     "core-js": "^2.5.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.6",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
