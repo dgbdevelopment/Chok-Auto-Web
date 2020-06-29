@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -17,6 +15,8 @@ import { MecanicaComponent } from './components/mecanica/mecanica.component';
 import { AseguradorasComponent } from './components/aseguradoras/aseguradoras.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ChapaComponent } from './components/chapa/chapa.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { PoliticaComponent } from './components/politica/politica.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,9 @@ import { ChapaComponent } from './components/chapa/chapa.component';
     MecanicaComponent,
     AseguradorasComponent,
     ContactComponent,
-    ChapaComponent
+    ChapaComponent,
+    GalleryComponent,
+    PoliticaComponent
   ],
   imports: [
     BrowserModule,

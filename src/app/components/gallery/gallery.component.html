@@ -1,0 +1,22 @@
+<div id="modal">
+   <!-- <app-slider [images]="imagenes" [numeroImagen]="numeroImagen"></app-slider> -->
+   <img class="imagen" src="{{currentImage}}" title="{{currentImage}}">
+   <div class="btn-cerrar"><i class="far fa-window-close"></i></div>
+   <div class="cursores">
+      <span class="left"><i class="fas fa-angle-left" (click)="change(-1)"></i></span>
+      <span class="right"><i class="fas fa-angle-right" (click)="change(1)"></i></span>
+   </div>
+</div>
+
+<div id="galeria">
+   <h2 class="anim-in animated text-center border-bottom py-4 mb-4"><i class="far fa-images"></i> Galería de trabajos</h2>
+   <div class="row d-flex mt-4 align-content-between align-items-baseline">
+      <div class="anim-12 animated text-center col-4 col-sm-3 col-md-2 p-2 mb-3" *ngFor="let imagen of imagenes; index as i">
+         <div class="contenedor-imagen">
+            <img class="imagen" src="{{imagen}}" title="{{imagen}}" (click)="abreModal(i)">
+         </div>
+      </div>
+   </div>
+   
+</div>
+

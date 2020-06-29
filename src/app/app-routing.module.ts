@@ -6,6 +6,8 @@ import { MecanicaComponent } from './components/mecanica/mecanica.component';
 import { AseguradorasComponent } from './components/aseguradoras/aseguradoras.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ChapaComponent } from './components/chapa/chapa.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { PoliticaComponent } from './components/politica/politica.component';
 
 
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
    { path: 'servicios/chapa-y-pintura', component: ChapaComponent},
    { path: 'aseguradoras', component: AseguradorasComponent },
    { path: 'contacto', component: ContactComponent },
+   { path: 'galeria', component: GalleryComponent },
+   { path: 'politica-de-privacidad', component: PoliticaComponent },
    { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 

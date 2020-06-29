@@ -12,6 +12,9 @@ export class SliderComponent implements OnInit, AfterViewInit {
    // We need to install bxslider: npm i -S bxslider
 
    @Input() images: Array<string>;
+   @Input() numeroImagen: number;
+
+   public slider;
 
    constructor() { }
 
@@ -19,7 +22,8 @@ export class SliderComponent implements OnInit, AfterViewInit {
    }
 
    async ngAfterViewInit() {
-      await $('.slider').bxSlider({
+
+      const slider = await $('.slider').bxSlider({
          auto: true,
          mode: 'fade',
          speed: 1000,
@@ -27,11 +31,20 @@ export class SliderComponent implements OnInit, AfterViewInit {
          pager: false,
          pause: 5000,
          autoHover: true,
-         startSlide: 4
+         startSlide: 0,
+         adaptiveHeight: true
       });
+
+      if (this.numeroImagen !== 0) {
+         slider.goToSlide(this.numeroImagen);
+      }
       // Estilos CSS
+      if (window.location.href.includes('galeria')) {
+         $('.bx-wrapper').css({ 'top': '0', 'bottom': '0', 'left': '0', 'right': '0' });
+         $('.bx-wrapper img').css({ 'max-height': '99vh', 'max-width': '99vw' });
+      }
       $('.bx-wrapper, .bx-viewport').css({ 'border-radius': '5px' });
-      $('.bx-wrapper').css({'background': 'transparent', 'border': '5px solid transparent'});
+      $('.bx-wrapper').css({ 'background': 'transparent', 'border': '5px solid transparent' });
       $('.bx-wrapper .bx-next').css({ 'background': 'transparent' })
          .html('<i class="fas fa-angle-right"></i>');
       $('.bx-wrapper .bx-prev').css({ 'background': 'transparent' })
@@ -45,6 +58,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
          'text-decoration': '!default',
          'text-shadow': '0px 0px 5px #000'
       });
+      $('.bx-wrapper img').css({ 'margin': 'auto' });
 
    }
 
