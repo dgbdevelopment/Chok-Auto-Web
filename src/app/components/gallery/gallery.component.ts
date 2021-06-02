@@ -10,7 +10,7 @@ declare var $: $;
 })
 export class GalleryComponent implements OnInit, AfterViewInit {
   public imagenes: Array<any>;
-  public numeroImagenes = 83;
+  public numeroImagenes = 93;
   public currentImage: string;
   public contador: number;
 
